@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+
+        <!-- Vue Formulaire pour Job Application -->
+        <record id="job_application_form_view" model="ir.ui.view">
+            <field name="name">job.application.form</field>
+            <field name="model">job.application</field>
+            <field name="arch" type="xml">
+                <form string="Job Application" class="container oe_background_image">
+                    <!-- Ajout de la classe Bootstrap container -->
+                    <sheet>
+                        <group class="mb-3"> <!-- Ajout de la classe Bootstrap mb-3 pour créer un espace entre les éléments -->
+                            <field name="name" class="form-control"/> <!-- Ajout de la classe Bootstrap form-control -->
+                            <field name="job_description" filename="name"
+                                   class="form-control"/> <!-- Ajout de la classe Bootstrap form-control -->
+                            <!-- Champ resume_ids supprimé ici -->
+                            <field name="resume_files" widget="many2many_binary" options='{"multiple": true}'
+                                   class="form-control-file"/> <!-- Ajout de la classe Bootstrap form-control-file -->
+                            <button string="Send to Flask" type="object" name="send_to_flask_api"
+                                    class="btn btn-primary oe_inline oe_scroll_button">
+                                <i class="fa fa-paper-plane"></i>
+                                Filtrer
+                            </button>
+
+
+                        </group>
+                        <!-- Nouveau champ One2many pour afficher les résultats -->
+                        <group string="Results" class="string-Results">
+                            <field name="result_ids">
+                                <tree string="Matching Results" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="score"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_job_application_tree" model="ir.ui.view">
+            <field name="name">job.application.tree</field>
+            <field name="model">job.application</field>
+            <field name="arch" type="xml">
+                <tree string="Job Applications" class="custom_job_applications">
+                    <field name="name" class="custom_name_field"/>
+                </tree>
+
+            </field>
+        </record>
+
+
+        <!-- Actions et Menu Items pour la navigation -->
+        <record model="ir.actions.act_window" id="job_application_action">
+            <field name="name">Job Applications</field>
+            <field name="res_model">job.application</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_job_application_tree"/>
+        </record>
+
+        <menuitem id="property_menu_item"
+                  name="Properties"
+                  parent="properties_menu"
+                  action="job_application_action"/>
+    </data>
+</odoo>

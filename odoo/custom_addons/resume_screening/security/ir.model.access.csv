@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_job_application,access_job_application,model_job_application,,1,1,1,1
+access_job_application_resume,access_job_application_resume,model_job_application_resume,,1,1,1,1
+access_job_application_result,access_job_application_result,model_job_application_result,,1,1,1,1

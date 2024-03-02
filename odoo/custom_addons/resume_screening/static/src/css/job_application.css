@@ -1,0 +1,271 @@
+/* Assure la transparence des éléments pour intégrer l'arrière-plan de la ville */
+
+.o_form_view .child-class, .o_list_view .child-class {
+    background-color: rgba(50, 50, 75, 0.7) !important; /* Idem pour les classes enfants */
+}
+
+.o_form_view .o_form_sheet {
+    background-color: rgba(50, 50, 75, 0.7);
+    background-blend-mode: overlay;
+}
+
+/* Uniformiser les champs de formulaire avec le reste de l'interface */
+.input-group-addon, .form-control, .o_field_widget {
+    background-color: rgba(50, 50, 75, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #E0E0E0 !important;
+}
+
+/* Ajustements des tableaux pour s'harmoniser avec le thème */
+.table > :not(caption) > * > * {
+    background-color: rgba(50, 50, 75, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Utilisation de l'image de fond spécifique à l'application */
+.o_content {
+    background: url('/resume_screening/static/src/img/Riyadh_Skyline.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+
+
+
+/* Styles de texte pour assurer la lisibilité sur l'image de fond */
+.o_form_view, .o_list_view {
+    color: #E0E0E0 !important; /* Teinte de blanc adoucie pour le texte */
+}
+
+/* Styles pour les en-têtes et les boutons */
+.o_control_panel .o_cp_left, .o_control_panel .o_cp_right, .btn-primary {
+    background-color: rgba(50, 50, 75, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Styles pour les champs de formulaire */
+.input-group-addon, .form-control, .o_field_widget {
+    background-color: rgba(50, 50, 75, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #E0E0E0 !important;
+}
+
+.o_input {
+    background-color: rgba(50, 50, 75, 0.7) !important;
+    color: #E0E0E0 !important;
+}
+
+.input-group-addon, .form-control, .o_field_widget {
+    background-color: rgba(50, 50, 75, 0.7) !important; /* Couleur de fond semi-transparente avec une teinte bleu-gris foncé pour mieux s'harmoniser avec l'arrière-plan nocturne */
+    color: #E0E0E0 !important; /* Couleur de texte légèrement plus douce que le blanc pur pour réduire le contraste et améliorer la lisibilité */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Ajout d'une bordure subtile pour délimiter les éléments sans trop de contraste */
+}
+.o_main_navbar {
+    --o-navbar-height: 46px;
+    --Dropdown_menu-margin-y: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: var(--o-navbar-height);
+    min-width: min-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0;
+    background-color: rgba(50, 50, 75, 0.7) !important; /* Idem pour les classes enfants */
+    font-size: 0.875rem;
+}
+
+.o_main_navbar > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.o_main_navbar .o_nav_entry, .o_main_navbar .dropdown-toggle {
+    border-color: transparent;
+}
+
+.o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_sections .dropdown-toggle {
+    background: rgba(38, 42, 54, 0.7); /* Fond semi-transparent pour les entrées de menu */
+    border: 1px solid transparent;
+}
+
+.o_main_navbar .o_menu_sections .o_nav_entry:hover, .o_main_navbar .o_menu_sections .dropdown-toggle:hover {
+    background: rgba(60, 60, 90, 0.7); /* Fond semi-transparent ajusté pour l'effet de survol */
+}
+
+.o_main_navbar .o_menu_sections .o_nav_entry:focus, .o_main_navbar .o_menu_sections .dropdown-toggle:focus {
+    background: rgba(38, 42, 54, 0.7); /* Fond semi-transparent pour l'effet de focus */
+}
+
+.o_main_navbar .o_menu_sections .o_nav_entry:active, .o_main_navbar .o_menu_sections .dropdown-toggle:active {
+    background: rgba(50, 50, 75, 0.7); /* Fond semi-transparent pour l'effet actif */
+}
+
+.o_main_navbar .o_menu_sections .dropdown.show > .dropdown-toggle {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(54, 76, 86, 0.7); /* Fond semi-transparent pour les dropdowns actifs */
+    color: #E0E0E0;
+}
+
+.o_main_navbar .dropdown-menu {
+    border-top: 1px solid rgba(90, 94, 107, 0.7);
+    border-radius: 0.25rem;
+}
+
+/* Le reste des styles de dropdown-menu et o_navbar_apps_menu reste inchangé car ils ne spécifient pas de couleur de fond qui nécessite une modification */
+
+.o_main_navbar .o_menu_brand {
+    padding-left: 0;
+    font-size: 1.2em;
+    color: #D1D1D1; /* Couleur ajustée pour la marque selon les modifications précédentes */
+}
+
+.o_main_navbar .o_menu_brand:hover {
+    background: none; /* Pas de changement de fond au survol pour la marque */
+}
+
+.o_main_navbar .o_menu_sections .o_more_dropdown_section_group {
+    margin-top: .8em;
+}
+
+.o_main_navbar .o_menu_sections .o_more_dropdown_section_group:first-child {
+    margin-top: -0.5rem;
+    padding-top: 0.75rem;
+}
+
+.o_main_navbar .o_menu_systray {
+    --NavBar-entry-padding-left: 0.315em;
+    --NavBar-entry-padding-right: 0.315em;
+}
+
+.o_main_navbar .o_menu_systray .badge {
+    margin-right: -.5em;
+    border: 0;
+    padding: 3px 6px;
+    background-color: var(--o-navbar-badge-bg, #b83232);
+    font-size: 0.7em;
+    color: var(--o-navbar-badge-color, #000);
+    text-shadow: var(--o-navbar-badge-text-shadow, none);
+    transform: translate(-0.6em, -30%);
+}
+
+body.o_is_superuser .o_menu_systray {
+    border-image: repeating-linear-gradient(135deg, #d9b904, #d9b904 10px, #373435 10px, #373435 20px) 2;
+    border-image-width: 2px;
+}
+
+.user-select-none {
+    user-select: none !important;
+}
+.mt-5 {
+    margin-top: 48px !important;
+}
+.mx-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.row {
+    gutter-x: 32px;
+    gutter-y: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--gutter-y));
+    margin-right: calc(-.5* var(--gutter-x));
+    margin-left: calc(-.5* var(--gutter-x));
+}
+.user-select-none {
+    -webkit-user-select: none !important;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.o_home_menu {
+    font-size: 0.875rem;
+}
+html .o_web_client > .o_action_manager {
+    direction: ltr;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: 100%;
+    overflow: hidden;
+}
+.o_home_menu_background {
+        background: url('/resume_screening/static/src/img/Riyadh_Skyline.jpg') no-repeat center center fixed;
+        background-size: cover;
+}
+.o_web_client {
+    direction: ltr;
+    position: relative;
+    background-color: #1B1D26;
+    color-scheme: dark;
+}
+body {
+    margin: 0;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
+    color: var(--body-color);
+    text-align: var(--body-text-align);
+    background-color: var(--body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.oe_scroll_button {
+    position: fixed;
+    top: 350px;
+    right: 10px;
+    z-index: 999;
+    width: 110px; /* Ajustez la largeur selon vos besoins */
+    padding: 10px 20px; /* Ajustez le remplissage pour mieux adapter le contenu */
+    transition: all 0.3s ease; /* Animation de transition */
+    border-radius: 20px; /* Bouton avec coins fortement arrondis */
+    background-color: #4CAF50; /* Couleur de fond verte (exemple) */
+    color: white; /* Couleur du texte */
+    font-weight: bold; /* Police en gras */
+    text-transform: uppercase; /* Texte en majuscules */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Change le curseur en main lors du survol */
+}
+
+/* Animation lors du survol pour les deux boutons */
+.oe_scroll_button:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Animation lors de la focalisation pour les deux boutons */
+.oe_scroll_button:focus {
+    transform: scale(1.05); /* Légère augmentation de la taille */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Animation lors de l'activation pour les deux boutons */
+.oe_scroll_button:active {
+    transform: scale(0.95); /* Réduction de la taille pour simuler le clic */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Ombre plus petite pour effet enfoncé */
+}
+
+
+
+
+
+
+
+
