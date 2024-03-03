@@ -72,8 +72,6 @@ setup(
         'XlsxWriter == 3.0.2',
         'xlwt == 1.3.*',
         'zeep == 4.1.0',
-        'psycopg2 == 2.9.2 ; sys_platform != "win32" and python_version <= "3.10"',
-        'psycopg2 == 2.9.5 ; python_version > "3.10" or sys_platform == "win32"',
     ],
     python_requires='>=3.10',
     extras_require={
